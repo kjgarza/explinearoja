@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppFab } from "@/components/whatsapp-fab"
+import { site } from "@/content/site"
 import "./globals.css"
 
 const barlow = Barlow({
@@ -22,6 +23,9 @@ export const metadata: Metadata = {
   title: "Express Linea Roja — Transporte de Carga en Monterrey",
   description:
     "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y plataforma desde 2006. Cotiza tu envío por WhatsApp.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://expresslinearoja.com"
+  ),
   keywords: [
     "transporte de carga",
     "Monterrey",
@@ -31,6 +35,33 @@ export const metadata: Metadata = {
     "transporte foráneo",
     "Nuevo León",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_MX",
+    url: "/",
+    title: "Express Linea Roja — Transporte de Carga en Monterrey",
+    description:
+      "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y plataforma desde 2006. Cotiza tu envío por WhatsApp.",
+    siteName: site.name,
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Express Linea Roja - Transporte de Carga en Monterrey",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Express Linea Roja — Transporte de Carga en Monterrey",
+    description:
+      "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y plataforma desde 2006.",
+    images: ["/twitter-image"],
+  },
 }
 
 export default function RootLayout({
