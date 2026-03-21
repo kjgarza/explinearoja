@@ -24,7 +24,10 @@ export const metadata: Metadata = {
   description:
     "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y plataforma desde 2006. Cotiza tu envío por WhatsApp.",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://expresslinearoja.com"
+    process.env.NEXT_PUBLIC_SITE_URL ||
+      (process.env.NEXT_PUBLIC_REPO_NAME
+        ? `https://kjgarza.github.io/${process.env.NEXT_PUBLIC_REPO_NAME}`
+        : "https://kjgarza.github.io/explinearoja")
   ),
   keywords: [
     "transporte de carga",
