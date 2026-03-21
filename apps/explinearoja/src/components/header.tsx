@@ -5,6 +5,7 @@ import { site } from "@/content/site"
 import { ThemeSwitcher } from "./theme-switcher"
 import { HeaderClient } from "./header-client"
 
+
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
@@ -20,13 +21,13 @@ export function Header() {
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
           {navigation.map((item) => (
-            <Link
+            <a
               key={item.href}
-              href={`/${item.href}`}
+              href={item.href}
               className="relative text-sm font-medium uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-primary after:transition-all hover:after:w-full"
             >
               {item.label}
-            </Link>
+            </a>
           ))}
           <ThemeSwitcher />
           <Button asChild size="sm" className="rounded-sm px-6 font-semibold uppercase tracking-wider">

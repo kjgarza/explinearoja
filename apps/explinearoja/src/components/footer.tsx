@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { navigation } from "@/content/navigation"
 import { site } from "@/content/site"
 
@@ -23,13 +22,13 @@ export function Footer() {
           {/* Navigation */}
           <nav className="flex gap-8">
             {navigation.map((item) => (
-              <Link
+              <a
                 key={item.href}
-                href={`/${item.href}`}
+                href={item.href}
                 className="text-sm uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground"
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
           </nav>
         </div>
