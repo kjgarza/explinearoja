@@ -1,6 +1,9 @@
-import Image from "next/image"
 import { navigation } from "@/content/navigation"
 import { site } from "@/content/site"
+
+const basePath = process.env.NEXT_PUBLIC_REPO_NAME
+  ? `/${process.env.NEXT_PUBLIC_REPO_NAME}`
+  : ""
 
 export function Footer() {
   return (
@@ -8,11 +11,10 @@ export function Footer() {
       {/* Dark brand strip with long logo */}
       <div className="bg-[#1A1410] px-6 py-12">
         <div className="mx-auto flex max-w-6xl justify-end">
-          <Image
-            src="/logos/dark-long-logo.svg"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`${basePath}/logos/dark-long-logo.svg`}
             alt={site.name}
-            width={400}
-            height={96}
             className="h-16 w-auto sm:h-20 md:h-24"
           />
         </div>
