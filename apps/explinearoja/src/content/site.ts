@@ -8,6 +8,7 @@ export const site = {
     "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y plataforma desde 2006.",
   phone: "8182774657",
   phoneFormatted: "81 8277 4657",
+  email: "explinearoja@gmail.com",
   whatsappUrl:
     "https://wa.me/528182774657?text=Hola%2C%20me%20gustaría%20cotizar%20un%20envío",
   address: {

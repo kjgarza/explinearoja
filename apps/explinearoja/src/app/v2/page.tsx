@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Button } from "@repo/ui"
-import { Phone, MapPin } from "lucide-react"
+import { Phone, Mail } from "lucide-react"
 import { site } from "@/content/site"
 import { services } from "@/content/services"
 import { vehicles, trustFeatures } from "@/content/fleet"
@@ -150,9 +150,11 @@ export default function V2Page() {
           </p>
 
           <p>
-            <MapPin className="mb-1 inline-block h-4 w-4 text-primary" />{" "}
-            <strong>Ubicación</strong>: {site.address.street},{" "}
-            {site.address.country}
+            <Mail className="mb-1 inline-block h-4 w-4 text-primary" />{" "}
+            <strong>Email</strong>:{" "}
+            <a href={`mailto:${site.email}`} className="underline underline-offset-4 hover:text-primary">
+              Enviar Email
+            </a>
           </p>
         </section>
 

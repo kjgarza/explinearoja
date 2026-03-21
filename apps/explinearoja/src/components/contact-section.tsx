@@ -1,4 +1,4 @@
-import { Phone, MapPin } from "lucide-react"
+import { Phone, Mail } from "lucide-react"
 import { site } from "@/content/site"
 import { WhatsAppIcon } from "./icons/whatsapp-icon"
 
@@ -59,19 +59,22 @@ export function ContactSection() {
               </div>
             </a>
 
-            <div className="flex items-start gap-4 p-4 -ml-4">
+            <a
+              href={`mailto:${site.email}`}
+              className="flex items-start gap-4 p-4 -ml-4 group rounded-sm transition-colors hover:bg-primary/5"
+            >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-primary/10">
-                <MapPin className="h-5 w-5 text-primary" />
+                <Mail className="h-5 w-5 text-primary" />
               </div>
               <div>
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-                  Ubicación
+                  Email
                 </h3>
-                <p className="mt-1 text-lg text-muted-foreground">
-                  {site.address.street}, {site.address.country}
+                <p className="mt-1 text-lg text-muted-foreground transition-colors group-hover:text-foreground">
+                  Enviar Email
                 </p>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Map embed */}
