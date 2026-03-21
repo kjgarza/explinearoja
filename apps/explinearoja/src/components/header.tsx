@@ -4,6 +4,7 @@ import { navigation } from "@/content/navigation"
 import { site } from "@/content/site"
 import { ThemeSwitcher } from "./theme-switcher"
 import { HeaderClient } from "./header-client"
+import { LogoSmall } from "./icons/logo-small"
 
 
 export function Header() {
@@ -12,10 +13,10 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link
           href="/#inicio"
-          className="group flex items-center gap-2 font-heading text-xl font-bold uppercase tracking-wider text-foreground"
+          className="group flex items-center text-foreground transition-opacity hover:opacity-80"
+          aria-label={site.shortName}
         >
-          <span className="inline-block h-5 w-1 bg-primary transition-all group-hover:h-6 group-hover:w-1.5" />
-          {site.shortName}
+          <LogoSmall className="h-9 w-auto" />
         </Link>
 
         {/* Desktop nav */}

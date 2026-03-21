@@ -6,6 +6,7 @@ import { Button, Sheet, SheetContent, SheetTrigger, SheetTitle } from "@repo/ui"
 import { navigation } from "@/content/navigation"
 import { site } from "@/content/site"
 import { ThemeSwitcher } from "./theme-switcher"
+import { LogoSmall } from "./icons/logo-small"
 
 export function HeaderClient() {
   const [open, setOpen] = useState(false)
@@ -19,12 +20,12 @@ export function HeaderClient() {
       </SheetTrigger>
       <SheetContent side="right" className="w-80 border-l-0 bg-background">
         <div className="flex items-center gap-2">
-          <span className="inline-block h-5 w-1 bg-primary" />
-          <SheetTitle className="font-heading text-lg font-bold uppercase tracking-wider text-foreground">
+          <LogoSmall className="h-7 w-auto text-foreground" />
+          <SheetTitle className="sr-only">
             {site.shortName}
           </SheetTitle>
         </div>
-        <div className="mt-1 ml-3 h-px w-16 bg-primary/40" />
+        <div className="mt-1 h-px w-16 bg-primary/40" />
         <nav className="mt-10 flex flex-col gap-1">
           {navigation.map((item, i) => (
             <a
