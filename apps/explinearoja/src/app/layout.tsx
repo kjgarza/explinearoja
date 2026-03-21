@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     images: [
       {
-        url: "/opengraph-image",
+        url: "/opengraph.png",
         width: 1200,
         height: 630,
         alt: "Express Linea Roja - Transporte de Carga en Monterrey",
