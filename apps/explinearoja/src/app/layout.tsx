@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Express Linea Roja — Transporte de Carga en Monterrey",
     description:
       "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y plataforma desde 2006.",
-    images: ["/twitter-image"],
+    images: ["/opengraph.png"],
   },
 }
 
