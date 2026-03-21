@@ -19,4 +19,5 @@ export const site = {
   },
   founded: 2006,
   owner: "Express Linea Roja",
+  useOldLogo: true, // flip to false to restore new logos
 } as const

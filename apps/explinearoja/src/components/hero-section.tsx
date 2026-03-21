@@ -10,7 +10,7 @@ export function HeroSection() {
       className="relative flex min-h-[calc(100vh-4.25rem)] flex-col items-start justify-center overflow-hidden px-6"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 -z-20 bg-gradient-to-br from-background via-background to-primary/5" />
+      <div className="absolute inset-0 -z-20 bg-gradient-to-br from-background via-background to-primary/15" />
 
       {/* Decorative grid lines */}
       <div className="absolute inset-0 -z-10 opacity-[0.03]">

@@ -5,7 +5,7 @@ import { site } from "@/content/site"
 import { ThemeSwitcher } from "./theme-switcher"
 import { HeaderClient } from "./header-client"
 import { LogoSmall } from "./icons/logo-small"
-
+import { OldLogoSmall } from "./icons/old-logo-small"
 
 export function Header() {
   return (
@@ -16,7 +16,11 @@ export function Header() {
           className="group flex items-center text-foreground transition-opacity hover:opacity-80"
           aria-label={site.shortName}
         >
-          <LogoSmall className="h-9 w-auto" />
+          {site.useOldLogo ? (
+            <OldLogoSmall className="h-9 w-auto" />
+          ) : (
+            <LogoSmall className="h-9 w-auto" />
+          )}
         </Link>
 
         {/* Desktop nav */}

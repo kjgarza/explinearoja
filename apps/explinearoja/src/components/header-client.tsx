@@ -7,6 +7,7 @@ import { navigation } from "@/content/navigation"
 import { site } from "@/content/site"
 import { ThemeSwitcher } from "./theme-switcher"
 import { LogoSmall } from "./icons/logo-small"
+import { OldLogoSmall } from "./icons/old-logo-small"
 
 export function HeaderClient() {
   const [open, setOpen] = useState(false)
@@ -20,7 +21,11 @@ export function HeaderClient() {
       </SheetTrigger>
       <SheetContent side="right" className="w-80 border-l-0 bg-background">
         <div className="flex items-center gap-2">
-          <LogoSmall className="h-7 w-auto text-foreground" />
+          {site.useOldLogo ? (
+            <OldLogoSmall className="h-7 w-auto" />
+          ) : (
+            <LogoSmall className="h-7 w-auto text-foreground" />
+          )}
           <SheetTitle className="sr-only">
             {site.shortName}
           </SheetTitle>

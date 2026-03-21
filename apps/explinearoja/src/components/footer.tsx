@@ -1,5 +1,6 @@
 import { navigation } from "@/content/navigation"
 import { site } from "@/content/site"
+import { OldLogoLarge } from "./icons/old-logo-large"
 
 const basePath = process.env.NEXT_PUBLIC_REPO_NAME
   ? `/${process.env.NEXT_PUBLIC_REPO_NAME}`
@@ -9,14 +10,18 @@ export function Footer() {
   return (
     <footer>
       {/* Dark brand strip with long logo */}
-      <div className="bg-[#1A1410] px-6 py-12">
+      <div className="bg-[#1A1410] px-6 py-6 text-white sm:py-8">
         <div className="mx-auto flex max-w-6xl justify-end">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={`${basePath}/logos/dark-long-logo.svg`}
-            alt={site.name}
-            className="h-16 w-auto sm:h-20 md:h-24"
-          />
+          {site.useOldLogo ? (
+            <OldLogoLarge className="h-8 w-auto sm:h-10 md:h-12" />
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={`${basePath}/logos/dark-long-logo.svg`}
+              alt={site.name}
+              className="h-16 w-auto sm:h-20 md:h-24"
+            />
+          )}
         </div>
       </div>
 
