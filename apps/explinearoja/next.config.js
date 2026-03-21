@@ -10,8 +10,17 @@ const withPWA = require("next-pwa")({
   ]
 })
 
+const repoName = process.env.NEXT_PUBLIC_REPO_NAME || ""
+const isGitHubPagesBuild = process.env.GITHUB_ACTIONS === "true" && repoName.length > 0
+
 /** @type {import("next").NextConfig} */
 const nextConfig = {
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+  basePath: isGitHubPagesBuild ? `/${repoName}` : "",
+  assetPrefix: isGitHubPagesBuild ? `/${repoName}/` : undefined,
   transpilePackages: ["@repo/utils", "@repo/ui"],
 }
 
