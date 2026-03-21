@@ -30,8 +30,8 @@
   --color-surface-dark: oklch(0.16 0.01 60);
 
   /* Typography */
-  --font-sans: "Barlow", system-ui, -apple-system, sans-serif;
-  --font-heading: "Barlow Condensed", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Space Grotesk", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   /* Spacing scale */

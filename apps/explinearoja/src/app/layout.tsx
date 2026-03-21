@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Barlow, Barlow_Condensed } from "next/font/google"
+import { Inter, Space_Grotesk } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -7,16 +7,16 @@ import { WhatsAppFab } from "@/components/whatsapp-fab"
 import { site } from "@/content/site"
 import "./globals.css"
 
-const barlow = Barlow({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-barlow",
+  variable: "--font-inter",
 })
 
-const barlowCondensed = Barlow_Condensed({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["600", "700"],
-  variable: "--font-barlow-condensed",
+  weight: ["500", "600", "700"],
+  variable: "--font-space-grotesk",
 })
 
 export const metadata: Metadata = {
@@ -75,7 +75,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body
-        className={`${barlow.variable} ${barlowCondensed.variable} font-sans antialiased`}
+        className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
         <ThemeProvider

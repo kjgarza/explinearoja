@@ -27,8 +27,8 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
   --radius: 0.5rem;
-  --font-sans: var(--font-barlow), "Barlow", system-ui, -apple-system, sans-serif;
-  --font-heading: var(--font-barlow-condensed), "Barlow Condensed", system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: var(--font-space-grotesk), "Space Grotesk", system-ui, -apple-system, sans-serif;
 
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   --animate-fade-in: fade-in 0.6s ease both;
