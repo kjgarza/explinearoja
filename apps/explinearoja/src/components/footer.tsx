@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { navigation } from "@/content/navigation"
 import { site } from "@/content/site"
 
@@ -7,10 +8,11 @@ export function Footer() {
       {/* Dark brand strip with long logo */}
       <div className="bg-[#1A1410] px-6 py-12">
         <div className="mx-auto flex max-w-6xl justify-end">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/logos/dark-long-logo.svg"
             alt={site.name}
+            width={400}
+            height={96}
             className="h-16 w-auto sm:h-20 md:h-24"
           />
         </div>
