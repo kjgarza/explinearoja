@@ -3,14 +3,14 @@ import { MapPin, ShieldCheck, Power } from "lucide-react"
 export const vehicles = [
   {
     id: "tractocamion",
-    name: "Tractocamión con Caja Seca 53'",
+    name: "Tractocamiónes con Caja Seca 53'",
     capacity: "Hasta 25 toneladas",
     description:
       "Unidad de largo alcance para carga general y voluminosa. Caja seca de 53 pies con cierre hermético.",
   },
   {
     id: "camioneta",
-    name: "Camioneta de Carga 3.5t",
+    name: "Camionetas de Carga 3.5t",
     capacity: "Hasta 3.5 toneladas",
     description:
       "Ideal para entregas locales y distribución urbana. Maniobrabilidad en zonas de acceso restringido.",
