@@ -11,6 +11,8 @@ export const site = {
   email: "website+exp.linearoja@gmail.com",
   whatsappUrl:
     "https://wa.me/528182774657?text=Hola%2C%20me%20gustaría%20cotizar%20un%20envío",
+  driverContactUrl:
+    "https://wa.me/528182774657?text=Hola%2C%20estoy%20interesado%20en%20trabajar%20como%20chofer",
   address: {
     street: "Monterrey, Nuevo León",
     city: "Monterrey",

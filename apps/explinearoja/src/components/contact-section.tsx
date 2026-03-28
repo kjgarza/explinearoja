@@ -1,4 +1,4 @@
-import { Phone, Mail } from "lucide-react"
+import { Phone, Mail, Truck } from "lucide-react"
 import { site } from "@/content/site"
 import { WhatsAppIcon } from "./icons/whatsapp-icon"
 
@@ -56,6 +56,24 @@ export function ContactSection() {
                 <p className="mt-1 text-lg text-muted-foreground transition-colors group-hover:text-foreground">
                   Enviar mensaje
                 </p>
+              </div>
+            </a>
+            <a
+              href={site.driverContactUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-start gap-4 rounded-lg border border-transparent p-4 -ml-4 transition-colors hover:border-border/50 hover:bg-card"
+            >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-primary/10 transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+              <Truck className="h-5 w-5 text-primary group-hover:text-primary-foreground" />
+              </div>
+              <div>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
+                ¿Eres chofer?
+              </h3>
+              <p className="mt-1 text-lg text-muted-foreground transition-colors group-hover:text-foreground">
+                Trabaja con nosotros
+              </p>
               </div>
             </a>
 

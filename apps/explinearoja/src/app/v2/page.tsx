@@ -149,6 +149,20 @@ export default function V2Page() {
             </a>
           </p>
 
+
+          <p>
+            ¿Buscas trabajo como operador?{" "}
+            <a
+              href={site.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-primary"
+            >
+              Solicita empleo de chofer aquí
+            </a>
+            .
+          </p>
+
           <p>
             <Mail className="mb-1 inline-block h-4 w-4 text-primary" />{" "}
             <strong>Email</strong>:{" "}
