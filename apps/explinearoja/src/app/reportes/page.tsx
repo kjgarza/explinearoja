@@ -25,7 +25,7 @@ export default async function ReportIndexPage() {
           {reports.map((report) => (
             <li key={report.slug}>
               <Link
-                href={`/reporte/${report.slug}`}
+                href={`/reportes/${report.slug}`}
                 className="group block rounded-lg border border-border p-6 transition-colors hover:border-primary hover:bg-muted/50"
               >
                 <p className="text-xs font-semibold uppercase tracking-widest text-primary">
