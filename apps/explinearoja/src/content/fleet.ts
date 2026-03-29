@@ -15,6 +15,13 @@ export const vehicles = [
     description:
       "Ideal para entregas locales y distribución urbana. Maniobrabilidad en zonas de acceso restringido.",
   },
+  {
+    id: "volteo",
+    name: "Tractocamiónes de Volteo",
+    capacity: "Hasta 30 metros cúbicos",
+    description:
+      "Especializados en transporte de materiales a granel como tierra, grava o escombros. Volteo hidráulico para descarga eficiente.",
+  },
 ] as const
 
 export const trustFeatures = [
