@@ -2,7 +2,7 @@ import { navigation } from "@/content/navigation"
 import { site } from "@/content/site"
 import { OldLogoLarge } from "./icons/old-logo-large"
 
-const basePath = process.env.NEXT_PUBLIC_REPO_NAME
+const basePath = (process.env.NEXT_PUBLIC_REPO_NAME && !process.env.NEXT_PUBLIC_SITE_URL)
   ? `/${process.env.NEXT_PUBLIC_REPO_NAME}`
   : ""
 

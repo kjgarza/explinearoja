@@ -12,6 +12,7 @@ const withPWA = require("next-pwa")({
 
 const repoName = process.env.NEXT_PUBLIC_REPO_NAME || ""
 const isGitHubPagesBuild = process.env.GITHUB_ACTIONS === "true" && repoName.length > 0
+const hasCustomDomain = !!process.env.NEXT_PUBLIC_SITE_URL
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
@@ -19,8 +20,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isGitHubPagesBuild ? `/${repoName}` : "",
-  assetPrefix: isGitHubPagesBuild ? `/${repoName}/` : undefined,
+  basePath: (isGitHubPagesBuild && !hasCustomDomain) ? `/${repoName}` : "",
+  assetPrefix: (isGitHubPagesBuild && !hasCustomDomain) ? `/${repoName}/` : undefined,
   transpilePackages: ["@repo/utils", "@repo/ui"],
 }
 
