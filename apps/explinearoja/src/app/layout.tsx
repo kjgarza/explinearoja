@@ -22,7 +22,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Express Linea Roja — Transporte de Carga en Monterrey",
   description:
-    "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y plataforma desde 2006. Cotiza tu envío por WhatsApp.",
+    "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y en caja seca desde 2006. Cotiza tu envío por WhatsApp.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ||
       (process.env.NEXT_PUBLIC_REPO_NAME
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "transporte de carga",
     "Monterrey",
     "autotransporte",
-    "carga en plataforma",
+    "caja seca",
     "transporte local",
     "transporte foráneo",
     "Nuevo León",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: "/",
     title: "Express Linea Roja — Transporte de Carga en Monterrey",
     description:
-      "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y plataforma desde 2006. Cotiza tu envío por WhatsApp.",
+      "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y en caja seca desde 2006. Cotiza tu envío por WhatsApp.",
     siteName: site.name,
     images: [
       {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Express Linea Roja — Transporte de Carga en Monterrey",
     description:
-      "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y plataforma desde 2006.",
+      "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y en caja seca desde 2006.",
     images: ["/opengraph.png"],
   },
 }

@@ -33,8 +33,8 @@ export const trustFeatures = [
   },
   {
     id: "seguro",
-    title: "Seguro de Carga",
-    description: "Tu mercancía protegida durante todo el trayecto",
+    title: "Apoyo con Seguro de Carga",
+    description: "Acompañamiento documental para cargas aseguradas por cuenta del cliente",
     icon: ShieldCheck,
   },
   {

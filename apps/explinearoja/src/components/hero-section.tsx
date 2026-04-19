@@ -45,8 +45,8 @@ export function HeroSection() {
 
         {/* Subheading */}
         <p className="animate-fade-up stagger-2 mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-          {site.tagline}. Servicio local, foráneo y carga en plataforma con
-          rastreo GPS y seguro de carga.
+          {site.tagline}. Servicio local, foráneo y en caja seca con
+          rastreo GPS y apoyo para asegurar la carga por cuenta del cliente.
         </p>
 
         {/* CTAs */}
@@ -90,7 +90,7 @@ export function HeroSection() {
               100%
             </p>
             <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
-              Carga asegurada
+              Seguro por cliente
             </p>
           </div>
         </div>

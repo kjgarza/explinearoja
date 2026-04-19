@@ -5,7 +5,7 @@ export const site = {
   serviceType: "Servicio Publico Federal de Autotransporte de Carga",
   tagline: "Transporte de carga confiable desde Monterrey",
   description:
-    "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y plataforma desde 2006.",
+    "Empresa de autotransporte de carga en Monterrey, Nuevo León. Servicio local, foráneo y en caja seca desde 2006.",
   phone: "8182774657",
   phoneFormatted: "81 8277 4657",
   email: "website+exp.linearoja@gmail.com",

@@ -30,15 +30,15 @@ export default function V2Page() {
           </h1>
 
           <p className="lead text-xl leading-relaxed">
-            {site.tagline}. Servicio local, foráneo y carga en plataforma con
-            rastreo GPS y seguro de carga.
+            {site.tagline}. Servicio local, foráneo y en caja seca con
+            rastreo GPS y apoyo para asegurar la carga por cuenta del cliente.
           </p>
 
           <p>
             Con <strong>{yearsExperience}+ años de experiencia</strong>, rastreo
-            GPS <strong>24/7</strong> y <strong>100% de carga asegurada</strong>,
-            Express Linea Roja es tu aliado en logística desde Monterrey, Nuevo
-            León.
+            GPS <strong>24/7</strong> y apoyo para cargas aseguradas{" "}
+            <strong>por cuenta del cliente</strong>, Express Linea Roja es tu
+            aliado en logística desde Monterrey, Nuevo León.
           </p>
 
           <div className="not-prose mt-8">
