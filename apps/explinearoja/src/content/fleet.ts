@@ -33,8 +33,8 @@ export const trustFeatures = [
   },
   {
     id: "seguro",
-    title: "Apoyo con Seguro de Carga",
-    description: "Acompañamiento documental para cargas aseguradas por cuenta del cliente",
+    title: "Servicio Confiable",
+    description: "Seguimiento puntual y atención responsable durante todo el trayecto",
     icon: ShieldCheck,
   },
   {
