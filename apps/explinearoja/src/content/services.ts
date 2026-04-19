@@ -17,9 +17,9 @@ export const services = [
   },
   {
     id: "plataforma",
-    title: "Carga en Plataforma",
+    title: "Carga en Caja Seca",
     description:
-      "Transporte de carga sobredimensionada, maquinaria y materiales en plataformas especializadas con sujeción profesional.",
+      "Transporte de carga general y mercancía paletizada en caja seca, con seguimiento operativo y atención puntual.",
     icon: Container,
   },
 ] as const
