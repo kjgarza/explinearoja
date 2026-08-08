@@ -125,3 +125,58 @@ no hacen scroll, igual que hoy con `/reportes`).
 2. `bun run lint` y `bun run type-check` en la raíz — sin errores (revisar
    comillas dobles, sin `;`, `import type`).
 3. `bun run build` — el export estático genera `publicidad/index.html` sin fallar.
+
+---
+
+# Deployment diagnosis (2026-08-06) — why /publicidad is 404 on prod
+
+**Status: feature code is DONE and MERGED. This is a GitHub-side deploy issue,
+not a code issue. No repo changes are needed.**
+
+## What deploys the site
+
+The only deploy action is **"Deploy to GitHub Pages"** —
+`.github/workflows/deploy-pages.yml` (workflow id `249289557`, state `active`).
+
+- Triggers: `push` to `main` **or** `workflow_dispatch`.
+- Builds `apps/explinearoja` with Next.js static export and publishes
+  `./apps/explinearoja/out` to GitHub Pages.
+- Pages served at custom domain `explinearoja.xyz` (CNAME), no basePath, so the
+  route is exactly `/publicidad`.
+
+## What I found
+
+- PR #2 merged into `main` (`head_sha 127e0ff…`, includes `/publicidad`). ✓
+- The merge (a push to `main`) produced **no workflow run** — the last
+  push-triggered run was 2026-05-25 (~73 days earlier).
+- A **manual `workflow_dispatch` run exists** on the correct commit —
+  run #24, `run_id 31126877251`, created 19:26Z, `run_started_at` 19:49Z — but
+  it is stuck in **`queued` with 0 jobs scheduled**.
+- Repo is **public** (`private: false`) → GitHub-hosted Actions minutes are free
+  and unlimited, so this is **not** a billing/minutes cap.
+- A queued run with zero jobs on a public repo = jobs never got assigned to a
+  runner (transient GitHub runner backlog / Actions incident, or an Actions
+  restriction on the repo). Not a code or workflow-file defect.
+
+## Why I can't fix it from this session
+
+The GitHub app backing this session lacks `actions: write`: `run_workflow`,
+`cancel`, and `rerun` all return `403 Resource not accessible by integration`.
+So dispatching, cancelling, or re-running the stuck job must be done by the user.
+
+## Resolution (user-side, no code change) — in order
+
+1. Cancel the stuck **run #24** and click **"Re-run all jobs"** in the Actions
+   tab (Actions → Deploy to GitHub Pages → run #24). A fresh run usually gets a
+   runner.
+2. If it re-queues with 0 jobs again, check **githubstatus.com** for an active
+   Actions/runners incident and wait for it to clear.
+3. Confirm repo settings if it still won't schedule:
+   - **Settings → Actions → General → Actions permissions** = Allow (not
+     disabled/restricted).
+   - **Settings → Pages → Source** = "GitHub Actions".
+4. Once a run reaches `success`, `https://explinearoja.xyz/publicidad` resolves
+   (allow a minute for the Pages CDN to update).
+
+I can read the run/build logs of any new run to help debug — I just can't start,
+cancel, or re-run jobs.
