@@ -1,3 +1,7 @@
+# CLAUDE.md
+
+Shared instructions for coding agents. `AGENTS.md` is a symlink to this file, so Codex, Cursor and others read the same content.
+
 # explinearoja
 
 ## Monorepo Structure
@@ -99,3 +103,9 @@ cd packages/ui && bunx shadcn@latest add <component-name>
 ```
 
 Then export from `packages/ui/src/index.ts`.
+
+<!--
+Canonical instruction file. Edit this one; AGENTS.md is a symlink to it.
+Machine-local or personal notes go in CLAUDE.local.md (gitignored).
+Convention: notes/scratchpad/10-Projects/specs/agent-instructions-convention.md
+-->
